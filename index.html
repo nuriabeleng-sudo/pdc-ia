@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Web Inteligente - PDC</title>
+<style>
+:root{--rojo:#b40000;--rojo2:#8b0000;--rojo3:#cf0000;--gris:#f4f4f4;--texto:#222;--borde:#e3e3e3}*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#f5f5f5;color:var(--texto)}.hero{min-height:210px;background:linear-gradient(110deg,rgba(105,0,0,.98),rgba(190,0,0,.92),rgba(105,0,0,.94)),url('fondo-esfm.jpg');background-size:cover;background-position:center;display:flex;align-items:center;gap:35px;color:#fff;padding:26px 46px}.logoBox{width:135px;height:155px;border:4px solid #fff;border-radius:12px 12px 45px 45px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;font-weight:800;line-height:1.15;flex-shrink:0}.logoBook{font-size:40px;margin-top:10px}.tituloHero{flex:1}.tituloHero h1{font-size:38px;line-height:1.15;margin:0 0 18px;font-weight:800}.tituloHero p{font-size:22px;line-height:1.35;margin:0}.frase{width:280px;font-size:19px;line-height:1.35;font-style:italic}.frase b{font-style:normal;font-weight:500}.tabs{height:62px;background:#fff;display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #ddd;box-shadow:0 2px 5px rgba(0,0,0,.08)}.tab{border:0;border-right:1px solid #e2e2e2;background:#fff;font-weight:800;color:#555;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:14px;position:relative}.tab span{font-size:26px}.tab.active{color:var(--rojo)}.tab.active:after{content:"";position:absolute;bottom:0;width:50%;height:4px;background:var(--rojo);border-radius:4px 4px 0 0}.main{padding:24px 44px;display:grid;grid-template-columns:1fr 1fr 1.08fr;gap:24px}.card{background:#fff;border-radius:13px;padding:20px;box-shadow:0 5px 18px rgba(0,0,0,.12);min-height:560px}.cardHead{display:flex;align-items:center;gap:18px;margin-bottom:18px}.circle{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--rojo2),var(--rojo3));display:flex;align-items:center;justify-content:center;color:#fff;font-size:30px;box-shadow:0 5px 15px rgba(180,0,0,.25)}h2{margin:0;color:var(--rojo);font-size:23px}.card p{font-size:15.5px;line-height:1.48}.features{display:grid;grid-template-columns:1fr 1fr;margin-top:18px;border-top:1px solid var(--borde);border-left:1px solid var(--borde)}.feature{min-height:72px;border-right:1px solid var(--borde);border-bottom:1px solid var(--borde);display:grid;grid-template-columns:42px 1fr;align-items:center;gap:8px;padding:10px 12px;font-weight:700;font-size:14px}.feature i{font-style:normal;color:var(--rojo);font-size:30px;text-align:center}.objetivo{margin-top:16px;background:linear-gradient(120deg,#8a0000,#c80000,#980000);color:#fff;border-radius:7px;padding:16px;display:grid;grid-template-columns:68px 1fr;gap:14px;align-items:center}.objetivoIcon{width:62px;height:62px;border-radius:50%;background:rgba(120,0,0,.35);display:flex;align-items:center;justify-content:center;font-size:38px}.objetivo h3{margin:0 0 6px;font-size:18px}.objetivo p{margin:0;color:#fff}.upload{border:2px dashed #c7c7c7;border-radius:12px;text-align:center;padding:35px 20px;margin-top:18px}.cloud{font-size:58px;color:var(--rojo);line-height:1}.upload h3{font-size:16px;margin:10px 0 5px}.upload input{display:none}.fileLabel{display:inline-block;margin-top:10px;background:var(--rojo);color:#fff;padding:13px 25px;border-radius:6px;font-weight:800;cursor:pointer}.fileLabel:hover,.btn:hover{background:#850000}.note{display:grid;grid-template-columns:38px 1fr;gap:12px;align-items:start;border:1px solid #eeaaaa;background:#fff1f1;border-radius:7px;padding:13px;margin-top:24px;font-size:14px;line-height:1.35}.noteIcon{color:var(--rojo);font-size:26px;text-align:center}.btn{width:100%;height:46px;border:0;border-radius:7px;background:var(--rojo);color:#fff;font-weight:800;font-size:16px;cursor:pointer;margin-top:24px}.btn.outline{background:#fff;color:var(--rojo);border:1.5px solid var(--rojo);display:flex;justify-content:center;align-items:center;gap:12px}.formRow{display:grid;grid-template-columns:54px 1fr;gap:14px;margin:14px 0}.formIcon{width:52px;height:52px;border-radius:50%;background:#fafafa;display:flex;align-items:center;justify-content:center;color:var(--rojo);font-size:29px;box-shadow:0 6px 12px rgba(0,0,0,.04)}label{display:block;font-weight:800;margin-bottom:6px;font-size:14px}textarea{width:100%;height:68px;border:1px solid #ccc;border-radius:7px;padding:10px 12px;font-family:Arial,Helvetica,sans-serif;font-size:14px;resize:none;outline:none}textarea:focus{border-color:var(--rojo);box-shadow:0 0 0 3px rgba(180,0,0,.12)}.resultado{display:none;margin-top:15px;padding:14px;border-radius:7px;background:#eef8ee;border-left:5px solid #168333;line-height:1.45;font-size:14px}.footer{background:linear-gradient(100deg,#7f0000,#b70000,#7f0000);color:#fff;min-height:85px;padding:18px 50px;display:grid;grid-template-columns:1.3fr 1fr 1fr 1.1fr;gap:24px;align-items:center}.footItem{display:grid;grid-template-columns:54px 1fr;gap:12px;align-items:center;border-right:1px solid rgba(255,255,255,.18);min-height:55px}.footItem:last-child{border-right:0;display:block;text-align:right}.footIcon{font-size:38px}.footItem b{font-size:15px}.footItem small{display:block;margin-top:4px}.hiddenOnly{display:none}.fileName{font-size:13px;margin-top:10px;color:#555}@media(max-width:1050px){.main{grid-template-columns:1fr}.hero{flex-direction:column;text-align:center}.tituloHero h1{font-size:30px}.frase{width:auto}.footer{grid-template-columns:1fr;text-align:center}.footItem{border-right:0;justify-content:center}.footItem:last-child{text-align:center}.tabs{grid-template-columns:1fr;height:auto}.tab{height:58px}.tab.active:after{width:80%}}@media(max-width:560px){.hero{padding:20px}.main{padding:16px}.features{grid-template-columns:1fr}.tituloHero h1{font-size:25px}.tituloHero p{font-size:17px}.card{padding:16px}.logoBox{width:115px;height:135px}.footer{padding:20px}.formRow{grid-template-columns:1fr}.formIcon{display:none}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="logoBox"><div>ESFM</div><div>SIMÓN RODRÍGUEZ</div><div class="logoBook">📖</div><small>COCHABAMBA</small></div>
+  <div class="tituloHero"><h1>Implementación de una Red WiFi Educativa<br>y Sistema Web Inteligente</h1><p>Para la optimización de Planes de Desarrollo Curricular<br>ESFM “Simón Rodríguez”</p></div>
+  <div class="frase">“Educar es liberar al ser humano de sus cadenas y abrirle las puertas del conocimiento.”<br><br><b>— Simón Rodríguez</b></div>
+</header>
+<nav class="tabs">
+  <button class="tab active" onclick="marcar(this)"><span>⌂</span> PRESENTACIÓN</button>
+  <button class="tab" onclick="marcar(this)"><span>▤</span> REVISIÓN EN WORD</button>
+  <button class="tab" onclick="marcar(this)"><span>☷</span> REVISIÓN POR PARTES</button>
+</nav>
+<main class="main">
+<section class="card">
+  <div class="cardHead"><div class="circle">🏛</div><h2>PRESENTACIÓN</h2></div>
+  <p>Bienvenido al Sistema Web Inteligente de apoyo pedagógico para la revisión y optimización de Planes de Desarrollo Curricular (PDC).</p>
+  <p>Esta plataforma utiliza herramientas inteligentes para analizar la coherencia, estructura y calidad de los elementos del PDC, brindando sugerencias de mejora alineadas a la normativa vigente.</p>
+  <div class="features">
+    <div class="feature"><i>📄</i><span>Análisis inteligente de documentos</span></div>
+    <div class="feature"><i>🎯</i><span>Revisión de coherencia curricular</span></div>
+    <div class="feature"><i>💡</i><span>Sugerencias de mejora</span></div>
+    <div class="feature"><i>⚖</i><span>Alineación con normativa educativa</span></div>
+    <div class="feature"><i>👥</i><span>Apoyo a docentes y estudiantes</span></div>
+    <div class="feature"><i>🎓</i><span>Fortalecimiento de la calidad educativa</span></div>
+  </div>
+  <div class="objetivo"><div class="objetivoIcon">🛡</div><div><h3>Nuestro objetivo</h3><p>Contribuir a la mejora de la planificación curricular mediante tecnología, conectividad e inteligencia digital al servicio de la educación.</p></div></div>
+</section>
+<section class="card">
+  <div class="cardHead"><div class="circle">📄</div><h2>REVISIÓN EN WORD</h2></div>
+  <p>Sube tu documento del Plan de Desarrollo Curricular en formato Word (.docx) para realizar un análisis completo con observaciones y sugerencias.</p>
+  <div class="upload" id="zonaUpload">
+    <div class="cloud">☁⬆</div><h3>Arrastra y suelta tu archivo aquí</h3><p>o</p>
+    <input type="file" id="archivo" accept=".doc,.docx" onchange="mostrarArchivo()">
+    <label class="fileLabel" for="archivo">Seleccionar archivo .docx</label>
+    <div class="fileName" id="fileName"></div>
+  </div>
+  <div class="note"><div class="noteIcon">ⓘ</div><div>El sistema analizará automáticamente la estructura, redacción, coherencia curricular, uso de verbos, contenidos, momentos metodológicos y criterios de evaluación.</div></div>
+  <button class="btn outline" onclick="analizarDocumento()">Analizar documento 🔍</button>
+  <div class="resultado" id="resultadoWord"></div>
+</section>
+<section class="card">
+  <div class="cardHead"><div class="circle">🧩</div><h2>REVISIÓN POR PARTES</h2></div>
+  <p>Ingresa cada elemento del PDC para analizar la relación y coherencia entre sus componentes.</p>
+  <div class="formRow"><div class="formIcon">🎯</div><div><label>Objetivo de aprendizaje</label><textarea id="objetivo" placeholder="Escribe el objetivo de aprendizaje..."></textarea></div></div>
+  <div class="formRow"><div class="formIcon">📖</div><div><label>Contenidos</label><textarea id="contenidos" placeholder="Escribe los contenidos..."></textarea></div></div>
+  <div class="formRow"><div class="formIcon">⚙</div><div><label>Momentos del proceso</label><textarea id="momentos" placeholder="Describe los momentos: Práctica, Teoría, Valoración y Producción..."></textarea></div></div>
+  <div class="formRow"><div class="formIcon">⚖</div><div><label>Criterios de evaluación</label><textarea id="criterios" placeholder="Escribe los criterios de evaluación..."></textarea></div></div>
+  <button class="btn" onclick="analizarCoherencia()">🧠 Analizar coherencia</button>
+  <div class="resultado" id="resultadoPartes"></div>
+</section>
+</main>
+<footer class="footer">
+  <div class="footItem"><div class="footIcon">📖</div><div><b>ESFM “Simón Rodríguez”</b><small>Formando maestros, transformando realidades.</small></div></div>
+  <div class="footItem"><div class="footIcon">📶</div><div><b>Red WiFi Educativa</b><small>Conectividad para aprender</small></div></div>
+  <div class="footItem"><div class="footIcon">🛡</div><div><b>Tecnología al servicio</b><small>de la educación</small></div></div>
+  <div class="footItem">© 2025 Todos los derechos reservados<br>Sistema Web Inteligente - PDC</div>
+</footer>
+<script>
+function marcar(boton){document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));boton.classList.add('active')}
+function mostrarArchivo(){const a=document.getElementById('archivo');const n=document.getElementById('fileName');n.textContent=a.files.length?'Archivo seleccionado: '+a.files[0].name:''}
+function analizarDocumento(){const a=document.getElementById('archivo');const r=document.getElementById('resultadoWord');if(!a.files.length){alert('Primero selecciona un archivo Word.');return}r.style.display='block';r.innerHTML='✅ <b>Documento cargado correctamente.</b><br><br>Observación simulada: el PDC será revisado considerando estructura, redacción, coherencia curricular, uso de verbos, relación entre contenidos, momentos metodológicos y criterios de evaluación.'}
+function analizarCoherencia(){let objetivo=document.getElementById('objetivo').value.trim();let contenidos=document.getElementById('contenidos').value.trim();let momentos=document.getElementById('momentos').value.trim();let criterios=document.getElementById('criterios').value.trim();let r=document.getElementById('resultadoPartes');if(!objetivo||!contenidos||!momentos||!criterios){alert('Completa todos los campos para analizar la coherencia.');return}let sugerencias=[];if(!/analiza|identifica|describe|explica|aplica|elabora|comprende|valora/i.test(objetivo)){sugerencias.push('El objetivo puede mejorar incluyendo verbos claros de aprendizaje.')}if(!/práctica|practica|teoría|teoria|valoración|valoracion|producción|produccion/i.test(momentos)){sugerencias.push('Conviene mencionar los momentos metodológicos: Práctica, Teoría, Valoración y Producción.')}if(criterios.length<50){sugerencias.push('Los criterios de evaluación pueden ampliarse para responder mejor al objetivo.')}if(sugerencias.length===0){sugerencias.push('La estructura presenta coherencia general entre objetivo, contenidos, momentos y criterios.')}r.style.display='block';r.innerHTML='✅ <b>Análisis de coherencia realizado.</b><br><br>'+sugerencias.map(s=>'• '+s).join('<br>')+'<br><br><b>Recomendación:</b> verificar que cada criterio evalúe directamente lo trabajado en los momentos del proceso formativo.'}
+const zona=document.getElementById('zonaUpload');zona.addEventListener('dragover',e=>{e.preventDefault();zona.style.background='#fff4f4'});zona.addEventListener('dragleave',()=>zona.style.background='white');zona.addEventListener('drop',e=>{e.preventDefault();zona.style.background='white';document.getElementById('archivo').files=e.dataTransfer.files;mostrarArchivo()});
+</script>
+</body>
+</html>
